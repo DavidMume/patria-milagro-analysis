@@ -56,31 +56,34 @@ try:
     from wordcloud import WordCloud
 
     freq = {
-        "patria": 180, "Colombia": 160, "nación": 120, "seguridad": 95,
-        "corrupción": 88, "Estado": 85, "crimen": 80, "gobierno": 78,
-        "República": 72, "democracia": 68, "Constitución": 65, "libertad": 60,
-        "fuerza pública": 55, "territorios": 52, "ciudadano": 50, "familia": 48,
-        "restauración": 45, "economía": 44, "narcotráfico": 42, "extorsión": 40,
+        "patria": 180, "Colombia": 160, "nacion": 120, "seguridad": 95,
+        "corrupcion": 88, "Estado": 85, "crimen": 80, "gobierno": 78,
+        "Republica": 72, "democracia": 68, "Constitucion": 65, "libertad": 60,
+        "fuerza publica": 55, "territorios": 52, "ciudadano": 50, "familia": 48,
+        "restauracion": 45, "economia": 44, "narcotrafico": 42, "extorsion": 40,
         "verdad": 38, "salud": 36, "campo": 35, "autoridad": 34, "principios": 32,
-        "dignidad": 30, "bien común": 28, "Ecopetrol": 26, "fiscal": 25,
-        "minería": 24, "educación": 23, "mujeres": 22, "energía": 21,
-        "anticorrupción": 20, "los nunca": 18, "blockchain": 15,
-        "Constituyente": 14, "milicianización": 13, "veteranos": 12,
-        "campesino": 20, "inversión": 18, "empleo": 16, "vivienda": 14,
+        "dignidad": 30, "bien comun": 28, "Ecopetrol": 26, "fiscal": 25,
+        "mineria": 24, "educacion": 23, "mujeres": 22, "energia": 21,
+        "anticorrupcion": 20, "campesino": 20, "orden": 19, "inversion": 18,
+        "los nunca": 18, "empleo": 16, "defensa": 16, "vivienda": 14,
+        "Constituyente": 14, "soberania": 15, "instituciones": 14,
+        "patria milagro": 16, "hora oscura": 13, "milicianizacion": 13,
+        "petroleo": 13, "reforma": 13, "empresa": 12, "veteranos": 12,
+        "extrema coherencia": 12, "coca": 14, "policia": 10, "ejercito": 10,
+        "gas": 12, "mercado": 11, "crecimiento": 11, "ajuste fiscal": 11,
+        "contrabando": 10, "DIAN": 10, "deuda": 10, "agroindustria": 10,
+        "fumigacion": 10, "turismo": 9, "exportacion": 8, "nuclear": 9,
+        "SECOP": 9, "bien comun": 11, "doctrina social": 9, "superavit": 9,
+        "erradicacion": 9, "carcel": 11, "extradicion": 11,
+        "extincion dominio": 8, "lavado": 9, "blockchain": 15,
+        "GAULA": 8, "INPEC": 8, "testaferro": 7, "desregulacion": 8,
     }
 
-    # Colores oscuros legibles sobre fondo blanco — sin amarillos ni verdes claros
+    # Paleta oscura (azul marino, rojo oscuro, borgoña) — legible sobre blanco
     COLORES_WC = [
-        "#1B3A6B",  # azul oscuro
-        "#C8102E",  # rojo
-        "#2E5F8A",  # azul medio
-        "#7B1D1D",  # rojo oscuro
-        "#0D2B4E",  # azul muy oscuro
-        "#8B0000",  # dark red
-        "#1A4A7A",  # azul acero
-        "#3B0A0A",  # granate
-        "#2C4770",  # azul pizarra
-        "#6B0F0F",  # rojo vino
+        "#0A1F44", "#1B2A6B", "#8B0000", "#A30000",
+        "#1C3A5E", "#6B0F0F", "#0D1B3E", "#7B1818",
+        "#2C3E6B", "#5C0A0A", "#12284A", "#B22222",
     ]
 
     import random
@@ -88,9 +91,10 @@ try:
         return random.choice(COLORES_WC)
 
     wc = WordCloud(
-        width=1400, height=700, background_color="white",
-        color_func=color_func, max_words=60,
-        prefer_horizontal=0.85, min_font_size=10,
+        width=1600, height=800, background_color="white",
+        color_func=color_func, max_words=80,
+        prefer_horizontal=0.75, min_font_size=9,
+        collocations=False,
     ).generate_from_frequencies(freq)
 
     fig, ax = plt.subplots(figsize=(14, 7))
