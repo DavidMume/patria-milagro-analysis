@@ -1,0 +1,21 @@
+id,titulo,url,tipo,paginas_estimadas,fecha_consulta,estado,densidad_programatica,nivel_retorico,uso_sugerido
+F01,Primeras 13 propuestas para reconstruir la Patria Milagro,https://defensoresdelapatria.com/wp-content/uploads/2026/04/PROPUESTAS-DEL-TIGRE.pdf,pdf_resumen,3,2026-06-04,disponible,baja,alto,punto_de_contraste
+F02,Pilares para reconstruir la Patria Milagro (web compilado),https://defensoresdelapatria.com/colombia-patria-milagro/,web_compilado,300+,2026-06-04,parcial_403,alta,medio_alto,fuente_principal
+F03,Pilares Fundacionales,https://defensoresdelapatria.com/wp-content/uploads/2026/04/PILARES-FUNDACIONALES.pdf,pdf_ideologico,14,2026-06-04,disponible,muy_baja,muy_alto,marco_ideologico
+F04,Programa de gobierno oficial Abelardo de la Espriella,,pdf_formal,29,2026-06-04,disponible,media,medio,registro_oficial
+F05,El Milagro del Valle del Cauca,https://defensoresdelapatria.com/wp-content/uploads/2026/04/EL-MILAGRO-DEL-VALLE-DEL-CAUCA-PRIMERAS-PROPUESTAS-PARA-LOS-VALLECAUCANOS_compressed.pdf,pdf_territorial,47,2026-06-04,disponible,media,medio,propuesta_regional
+F06,Discurso constitución / Bogotá,,pdf_discurso,330,2026-06-04,disponible,baja,alto,retorica_y_narrativa
+F07,Discurso Kennedy Bogotá,https://defensoresdelapatria.com/wp-content/uploads/2026/05/ADLE-Discurso-Kennedy.pdf,pdf_discurso,,2026-06-04,pendiente,baja,alto,contraste_retorica_territorial
+F08,Discurso Usaquén,https://defensoresdelapatria.com/wp-content/uploads/2026/05/ADLE-Discurso-Usaquen.pdf,pdf_discurso,,2026-06-04,pendiente,baja,alto,narrativa_personal
+F09,El Milagro de Iluminar la Patria,https://defensoresdelapatria.com/el-milagro-de-iluminar-la-patria/,pagina_tematica,,2026-06-04,pendiente,media,alto,diagnostico_nacional
+F10,El Milagro de la Seguridad,https://defensoresdelapatria.com/el-milagro-de-la-seguridad/,pagina_tematica,,2026-06-04,pendiente,alta,medio,seguridad
+F11,El Milagro de Erradicar la Corrupción,https://defensoresdelapatria.com/el-milagro-de-erradicar-la-corrupcion/,pagina_tematica,,2026-06-04,pendiente,alta,medio,anticorrupcion
+F12,El Milagro de Recuperar la Salud,https://defensoresdelapatria.com/el-milagro-de-la-salud/,pagina_tematica,,2026-06-04,pendiente,alta,medio,salud
+F13,El Milagro de la Transformación Productiva (Campo),https://defensoresdelapatria.com/el-milagro-de-la-transformacion-productiva/,pagina_tematica,,2026-06-04,pendiente,alta,medio,campo_agro
+F14,El Milagro de una Patria para las Mujeres,https://defensoresdelapatria.com/el-milagro-de-una-patria-para-las-mujeres/,pagina_tematica,,2026-06-04,pendiente,alta,medio,mujeres
+F15,El Milagro de la Energía,https://defensoresdelapatria.com/el-milagro-de-la-energia/,pagina_tematica,,2026-06-04,pendiente,alta,medio,energia_mineria
+F16,El Milagro de la Educación,https://defensoresdelapatria.com/el-milagro-de-la-educacion/,pagina_tematica,,2026-06-04,pendiente,alta,medio,educacion
+F17,El Milagro de Tener una Cultura en Acción,https://defensoresdelapatria.com/el-milagro-de-tener-una-cultura-en-accion/,pagina_tematica,,2026-06-04,pendiente,media,medio,cultura
+F18,El Milagro de Proteger el Medioambiente,https://defensoresdelapatria.com/el-milagro-de-proteger-el-medioambiente/,pagina_tematica,,2026-06-04,pendiente,media,medio,medioambiente
+F19,El Milagro de la Extrema Coherencia,https://defensoresdelapatria.com/el-milagro-de-la-extrema-coherencia/,pagina_tematica,,2026-06-04,error_403,baja,muy_alto,marco_ideologico
+F20,El Milagro del Bienestar Animal Integral,https://defensoresdelapatria.com/el-milagro-del-bienestar-animal-integral/,pagina_tematica,,2026-06-04,error_403,media,medio,bienestar_animal

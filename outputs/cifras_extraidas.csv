@@ -1,0 +1,31 @@
+id,cifra_original,valor,unidad,area_tematica,fuente_id,fuente_interna,fuente_externa_sugerida,verificable,notas
+C01,"330.000 hectáreas de coca",330000,hectáreas,narcotráfico,F02,texto pilar seguridad,UNODC 2024 / SIMCI,si,Cifra consistente con reportes internacionales
+C02,"más de 3000 toneladas de cocaína",3000,toneladas,narcotráfico,F02,texto pilar seguridad,UNODC 2024,si,Producción potencial
+C03,"94.000 hectáreas arrasadas por minería ilegal",94000,hectáreas,minería_ilegal,F02,texto pilar seguridad,SIMCI / IBOCA,si,Verificar año de referencia
+C04,"más de 1120 ríos contaminados",1120,ríos,medioambiente,F02,texto pilar seguridad,IDEAM / Policía Ambiental,parcial,Sin año de referencia
+C05,"2293 puntos de extracción ilícita",2293,puntos,minería_ilegal,F02,texto pilar seguridad,SIMCI,parcial,Sin año de referencia
+C06,"107.924 desplazados en 2025",107924,personas,seguridad,F02,texto pilar seguridad,CODHES / OCHA,si,Año 2025
+C07,"128.825 confinados en 2025",128825,personas,seguridad,F02,texto pilar seguridad,CODHES / OCHA,si,Año 2025
+C08,"12.180 casos de extorsión en 2025",12180,casos,seguridad,F02,texto pilar seguridad,Policía Nacional,si,Año 2025
+C09,"651 secuestros en 2025 (477 extorsivos)",651,casos,seguridad,F02,texto pilar seguridad,Policía Nacional / Fondelibertad,si,Año 2025
+C10,"más de 27.000 integrantes de grupos armados ilegales",27000,personas,seguridad,F02,texto pilar seguridad,Indepaz / FIP,parcial,Verificar fuente y año
+C11,"crecimiento aproximado del 23,5% de grupos armados",23.5,%,seguridad,F02,texto pilar seguridad,Indepaz,parcial,Sin período de referencia claro
+C12,"$137,65 billones en riesgo por corrupción (2016-2022)",137650000000000,COP,anticorrupción,F02,texto pilar anticorrupción,Transparencia por Colombia / Contraloría,parcial,Período 2016-2022
+C13,"$21,28 billones perdidos por corrupción",21280000000000,COP,anticorrupción,F02,texto pilar anticorrupción,Contraloría General,parcial,Sin período explícito
+C14,"$9,28 billones recuperados",9280000000000,COP,anticorrupción,F02,texto pilar anticorrupción,Contraloría General,parcial,Sin período explícito
+C15,"$50 billones al año por corrupción",50000000000000,COP,anticorrupción,F02,texto pilar anticorrupción,No especificada,no,Cifra redonda sin fuente — requiere verificación
+C16,"1243 hechos de corrupción documentados (2016-2022)",1243,hechos,anticorrupción,F02,texto pilar anticorrupción,Transparencia por Colombia,si,72% con múltiples actores
+C17,"más del 60% de contratación nacional por contratación directa",60,%,anticorrupción,F02,texto pilar anticorrupción,Colombia Compra Eficiente / CGR,parcial,Verificar año
+C18,"cerca del 70% de contratación municipal por directa",70,%,anticorrupción,F02,texto pilar anticorrupción,Colombia Compra Eficiente,parcial,Verificar año
+C19,"hasta 150 regímenes especiales de contratación",150,regímenes,anticorrupción,F02,texto pilar anticorrupción,Colombia Compra Eficiente,parcial,Verificar
+C20,"75% de extorsiones proviene de cárceles",75,%,seguridad,F02,texto pilar seguridad,Sin fuente explícita,no,Requiere fuente — dato muy citado sin verificación pública clara
+C21,"$46.800 millones para carrotanques La Guajira (UNGRD)",46800000000,COP,anticorrupción,F02,texto pilar anticorrupción,Contraloría / medios,si,Caso documentado públicamente
+C22,"sobrecostos superiores a $16.000 millones (54%+)",16000000000,COP,anticorrupción,F02,texto pilar anticorrupción,Contraloría,si,Caso UNGRD-carrotanques
+C23,"contrabando estimado en USD 7.414 millones",7414000000,USD,economía,F02,texto pilar seguridad,DIAN / ANIF / Fedesarrollo,parcial,Verificar año y metodología
+C24,"pérdida fiscal por contrabando: $8,1 billones",8100000000000,COP,economía,F02,texto pilar seguridad,DIAN,parcial,Derivada del estimado anterior
+C25,"plan de choque en salud de $10 billones",10000000000000,COP,salud,F01,documento resumen,No especificada,no,Sin fuente de financiamiento
+C26,"reducción del Estado hasta en una cuarta parte",25,%,economía_fiscal,F01,documento resumen,No especificada,no,Sin metodología de cálculo
+C27,"vivienda con intereses de 2% a 30 años",2,%,economía,F01,documento resumen,No especificada,no,Depende de condiciones de mercado
+C28,"crecimiento del PIB por encima del 3%",3,%,economía,F01,documento resumen,No especificada,no,Meta sin senda de política
+C29,"2 millones de nuevas hectáreas productivas en campo",2000000,hectáreas,campo,F01,documento resumen,No especificada,no,Sin fuente ni cronograma
+C30,"600.000 empleos rurales",600000,empleos,campo,F01,documento resumen,No especificada,no,Sin horizonte temporal

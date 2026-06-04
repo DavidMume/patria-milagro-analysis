@@ -1,0 +1,23 @@
+# PDFs y documentos originales (no se suben al repo)
+*.pdf
+*.PDF
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Datos sensibles
+data/raw/*.txt
+sources/*_raw.txt
