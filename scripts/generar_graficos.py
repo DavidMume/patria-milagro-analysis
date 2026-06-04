@@ -69,9 +69,27 @@ try:
         "campesino": 20, "inversión": 18, "empleo": 16, "vivienda": 14,
     }
 
+    # Colores oscuros legibles sobre fondo blanco — sin amarillos ni verdes claros
+    COLORES_WC = [
+        "#1B3A6B",  # azul oscuro
+        "#C8102E",  # rojo
+        "#2E5F8A",  # azul medio
+        "#7B1D1D",  # rojo oscuro
+        "#0D2B4E",  # azul muy oscuro
+        "#8B0000",  # dark red
+        "#1A4A7A",  # azul acero
+        "#3B0A0A",  # granate
+        "#2C4770",  # azul pizarra
+        "#6B0F0F",  # rojo vino
+    ]
+
+    import random
+    def color_func(word, font_size, position, orientation, random_state=None, **kwargs):
+        return random.choice(COLORES_WC)
+
     wc = WordCloud(
         width=1400, height=700, background_color="white",
-        colormap="RdYlBu_r", max_words=60,
+        color_func=color_func, max_words=60,
         prefer_horizontal=0.85, min_font_size=10,
     ).generate_from_frequencies(freq)
 
