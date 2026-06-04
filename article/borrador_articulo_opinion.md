@@ -12,9 +12,15 @@ Esto importa por una razón metodológica elemental: si uno critica o apoya un p
 
 ## El documento de tres páginas como pieza de comunicación
 
-El documento corto cumple una función específica: presentar en un formato digerible los grandes ejes del proyecto para un público general que no va a leer 300 páginas de pilares programáticos. Eso no es una debilidad exclusiva de este candidato. Todos los proyectos políticos tienen materiales de distinto nivel de abstracción: el video de 30 segundos, el folleto de campaña, el programa técnico y el documento doctrinal. Confundir el folleto con el programa técnico es un error de lectura, no una conclusión política.
+El documento corto cumple una función específica: presentar en un formato digerible los grandes ejes del proyecto para un público general que no va a leer el corpus completo de pilares programáticos. Eso no es una debilidad exclusiva de este candidato. Todos los proyectos políticos tienen materiales de distinto nivel de abstracción: el video de 30 segundos, el folleto de campaña, el programa técnico y el documento doctrinal. Confundir el folleto con el programa técnico es un error de lectura, no una conclusión política.
 
-Lo que sí merece análisis es qué tan coherente es el programa técnico con la promesa política del folleto, y eso solo se puede responder leyendo el programa completo.
+Y hay un dato que lo confirma. Cuando se aplica el índice de legibilidad de Fernández Huerta (1959) — la adaptación calibrada para español de la escala Flesch — al corpus completo de los Pilares, el puntaje resultante ronda los 51,9 puntos. Eso equivale a dificultad de texto universitario o revista especializada: no es ilegible, pero está un escalón por encima de lo que la mayoría de personas lee cómodamente. Para dar una referencia concreta: un periódico popular ronda entre 65 y 70 puntos; un contrato legal cae por debajo de 30.
+
+Lo que eso significa, en términos políticos, es que el programa completo no está escrito para cualquier lector. Está escrito para quien tenga el tiempo, la formación y la disposición para procesar un texto técnico-político denso. El resumen de tres páginas no existe porque el equipo del candidato no sepa hacer programas. Existe porque entiende que la mayoría del electorado no va a leer un documento universitario, y necesita una versión que pueda conectar con ellos sin exigirles lo que no tienen: ni el tiempo, ni el vocabulario, ni la paciencia para el texto largo.
+
+Eso no absuelve al resumen de sus limitaciones. Pero cambia el diagnóstico: no es evidencia de superficialidad programática. Es evidencia de una estrategia de comunicación escalonada, donde cada capa habla a un público distinto.
+
+Lo que sí merece análisis es qué tan coherente es el programa técnico con la promesa política del folleto — y eso solo se puede responder leyendo el programa completo.
 
 ---
 
