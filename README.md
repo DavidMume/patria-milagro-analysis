@@ -1,90 +1,143 @@
-# Colombia, Patria Milagro — Análisis político-económico del programa de Abelardo de la Espriella
+# Colombia, Patria Milagro — Análisis político-económico
+### Programa de gobierno de Abelardo de la Espriella · Elecciones Colombia 2026
 
-Repositorio de análisis documental del programa de gobierno del candidato presidencial Abelardo de la Espriella para las elecciones colombianas de 2026.
+> **Economía Política · Procesamiento de Lenguaje Natural · Análisis de Discurso**
+> David Muñoz · 2026
 
-## Hipótesis central
+---
 
-El documento de tres páginas (*Primeras 13 propuestas para reconstruir la Patria Milagro*) es una pieza de comunicación política, no el programa completo. El proyecto programático real debe reconstruirse a partir de los Pilares Fundacionales, los documentos temáticos, los discursos y las propuestas territoriales — un corpus de más de 300 páginas distribuidas en el sitio [defensoresdelapatria.com](https://defensoresdelapatria.com/colombia-patria-milagro/).
+## ¿Por qué este análisis?
+
+La crítica más repetida al programa de De la Espriella es que "cabe en tres páginas". Este proyecto demuestra que esa lectura es incompleta: el documento de tres páginas es una pieza de comunicación política, no el programa. El proyecto programático real se distribuye en al menos cinco capas documentales con distinto nivel de abstracción y densidad técnica.
+
+El análisis aplica herramientas de economía política y NLP para responder: **¿qué propone realmente el candidato, cómo lo dice y qué revela su lenguaje sobre sus prioridades?**
+
+Como análisis complementario, los hallazgos se contrastan con el estudio del programa de Iván Cepeda disponible en [analisis-plan-gobierno-ivan-cepeda-2026](https://github.com/DavidMume/analisis-plan-gobierno-ivan-cepeda-2026).
+
+---
 
 ## Estructura del repositorio
 
 ```
 patria-milagro-analysis/
-├── sources/          # Inventario de fuentes y textos extraídos (sin PDFs)
+├── sources/          # Inventario de 20 fuentes documentales (CSV)
 ├── data/
-│   ├── raw/          # Textos crudos normalizados
+│   ├── raw/          # Textos crudos (no incluidos — ver .gitignore)
 │   └── processed/    # Corpus limpio, lematizado y clasificado
 ├── docs/             # Metodología, notas, glosario
-├── notebooks/        # Análisis en Jupyter
-├── outputs/          # Matrices de propuestas y cifras
-├── visualizations/   # Gráficos y wordclouds
-└── article/          # Borrador y versión final del artículo de opinión
+├── scripts/          # Script Python para generar gráficos
+├── notebooks/        # Análisis paso a paso en Jupyter
+├── outputs/          # Matrices de propuestas y cifras (CSV/MD)
+└── graficos/
+    ├── frecuencias/  # WordCloud, top unigrams
+    ├── tematico/     # Propuestas por área, tipos de enunciado
+    ├── estructura/   # Verificabilidad, densidad por fuente
+    └── comparativo/  # Espriella vs. Cepeda
 ```
 
-## Fuentes documentales
+---
 
-| ID | Documento | Tipo | URL |
+## Fuentes documentales analizadas
+
+| ID | Documento | Tipo | Páginas |
 |---|---|---|---|
-| F01 | Primeras 13 propuestas (Propuestas del Tigre) | Resumen ejecutivo | [enlace](https://defensoresdelapatria.com/wp-content/uploads/2026/04/PROPUESTAS-DEL-TIGRE.pdf) |
-| F02 | Pilares para reconstruir la Patria Milagro | Programa temático (web) | [enlace](https://defensoresdelapatria.com/colombia-patria-milagro/) |
-| F03 | Pilares Fundacionales | Marco ideológico | [enlace](https://defensoresdelapatria.com/wp-content/uploads/2026/04/PILARES-FUNDACIONALES.pdf) |
-| F04 | Programa de gobierno oficial | Documento formal | PDF registrado |
-| F05 | El Milagro del Valle del Cauca | Propuesta territorial | [enlace](https://defensoresdelapatria.com/wp-content/uploads/2026/04/EL-MILAGRO-DEL-VALLE-DEL-CAUCA-PRIMERAS-PROPUESTAS-PARA-LOS-VALLECAUCANOS_compressed.pdf) |
-| F06 | Discurso constitución / Bogotá | Discurso político | PDF |
+| F01 | Primeras 13 propuestas (Propuestas del Tigre) | Resumen ejecutivo | ~3 |
+| F02 | Pilares para reconstruir la Patria Milagro (web) | Programa temático | — |
+| F03 | Pilares Fundacionales | Marco ideológico | 14 |
+| F04 | Programa de gobierno oficial | Documento formal | 29 |
+| F05 | El Milagro del Valle del Cauca | Propuesta territorial | 47 |
 
-## Metodología
+Ver inventario completo en [`sources/00_fuentes_inventario.csv`](sources/00_fuentes_inventario.csv) (20 fuentes).
 
-Ver [`docs/metodologia.md`](docs/metodologia.md) para el protocolo completo de limpieza, clasificación y análisis NLP.
+---
 
-## Áreas temáticas analizadas
+## Principales hallazgos
 
-- Democracia e instituciones
-- Seguridad y control territorial
-- Anticorrupción
-- Economía y modelo de desarrollo
-- Política fiscal
-- Energía y minería
-- Salud
-- Educación
-- Campo y agro
-- Mujeres y cuidado
-- Cultura
-- Medio ambiente
-- Bienestar animal
-- Valle del Cauca / propuestas territoriales
+### El programa es, ante todo, un proyecto de seguridad y restauración institucional
+
+El análisis de frecuencias y la clasificación temática revelan que **seguridad y anticorrupción concentran el 42% de las propuestas concretas**. El vocabulario dominante — *patria, nación, restauración, República, Constitución* — no es tecnocrático ni redistributivo: es moral y político. Contrasta con el programa de Cepeda, donde el eje central es redistribución y justicia social.
+
+### El resumen ejecutivo no representa el programa completo
+
+El documento de tres páginas menciona los temas pero no los desarrolla. El pilar de seguridad, por ejemplo, incluye una doctrina completa con diez nuevas cárceles, un nuevo cuerpo penitenciario, fumigación aérea desde el día uno y comandos conjuntos por región — nada de eso aparece en el resumen.
+
+---
 
 ## Visualizaciones
 
-| Gráfica | Descripción |
-|---|---|
-| ![Tipos de enunciado](visualizations/01_tipos_enunciado.png) | Distribución del corpus por tipo: narrativa, propuesta, diagnóstico, etc. |
-| ![Propuestas por área](visualizations/02_propuestas_por_area.png) | Densidad programática por área temática |
-| ![Verificabilidad](visualizations/03_verificabilidad_cifras.png) | Qué porcentaje de las cifras citadas son verificables |
-| ![Cobertura](visualizations/04_cobertura_resumen_vs_pilares.png) | Comparación de cobertura: resumen ejecutivo vs. pilares completos |
-| ![Cifras por área](visualizations/05_cifras_por_area.png) | Distribución de cifras extraídas por área temática |
-| ![WordCloud](visualizations/06_wordcloud_corpus.png) | Términos más frecuentes del corpus completo |
+### Frecuencias
 
-> Las visualizaciones se generan ejecutando `notebooks/03_visualizaciones.ipynb`
+#### WordCloud — Vocabulario dominante del corpus
+![WordCloud](graficos/frecuencias/wordcloud.png)
 
-## Estado del proyecto
+#### Top 40 términos más frecuentes (lematizados)
+![Top 40 unigrams](graficos/frecuencias/top40_unigrams.png)
 
-- [x] Inventario de fuentes
-- [x] Metodología de análisis
-- [x] Estructura del repositorio
-- [ ] Limpieza y segmentación del corpus
-- [ ] Clasificación de enunciados
-- [ ] Lematización con spaCy
-- [ ] Matriz de propuestas
-- [ ] Análisis TF-IDF por área temática
-- [ ] Artículo de opinión
+---
+
+### Análisis temático
+
+#### Propuestas por área temática
+![Propuestas por área](graficos/tematico/propuestas_por_area.png)
+
+#### Distribución del corpus por tipo de enunciado
+![Tipos de enunciado](graficos/tematico/tipos_enunciado.png)
+
+---
+
+### Estructura del programa
+
+#### Verificabilidad de las 30 cifras extraídas
+![Verificabilidad](graficos/estructura/verificabilidad_cifras.png)
+
+#### Densidad programática por documento — ¿dónde están las propuestas concretas?
+![Densidad por fuente](graficos/estructura/densidad_por_fuente.png)
+
+---
+
+### Análisis comparativo: Espriella vs. Cepeda
+
+#### Distribución temática comparada
+![Comparativo temático](graficos/comparativo/espriella_vs_cepeda_tematico.png)
+
+#### Tono del discurso: propositivo vs. confrontacional
+![Tono comparado](graficos/comparativo/tono_espriella_vs_cepeda.png)
+
+#### Cobertura temática: resumen ejecutivo vs. pilares completos
+![Cobertura](graficos/comparativo/cobertura_resumen_vs_pilares.png)
+
+---
+
+## Metodología
+
+| Paso | Método | Pregunta que responde |
+|---|---|---|
+| 1. Inventario de fuentes | Clasificación manual | ¿Cuáles son los documentos del programa? |
+| 2. Limpieza y segmentación | Regex, spaCy | ¿Cuál es el corpus real? |
+| 3. Clasificación de enunciados | Reglas + anotación | ¿Qué tipo de texto domina? |
+| 4. Análisis de frecuencias | N-gramas, WordCloud | ¿Qué conceptos dominan el discurso? |
+| 5. Análisis temático | Diccionarios por eje | ¿Cuánto espacio le dedica a cada área? |
+| 6. Extracción de cifras | Regex + verificación | ¿Qué datos son verificables? |
+| 7. Análisis comparativo | Contraste con Cepeda | ¿Qué diferencia a ambos programas? |
+
+Ver metodología completa en [`docs/metodologia.md`](docs/metodologia.md).
 
 ## Requisitos
 
 ```bash
-pip install spacy pandas openpyxl scikit-learn matplotlib wordcloud
+pip install spacy pandas matplotlib wordcloud openpyxl scikit-learn
 python -m spacy download es_core_news_lg
+python scripts/generar_graficos.py
 ```
 
-## Autor
+## Estado del proyecto
 
-Análisis desarrollado con fines académicos y periodísticos. Fecha de inicio: junio 2026.
+- [x] Inventario de fuentes (20 documentos)
+- [x] Metodología y glosario
+- [x] Extracción de cifras (30 cifras, con nivel de verificabilidad)
+- [x] Comparación resumen ejecutivo vs. pilares
+- [x] Visualizaciones (9 gráficos)
+- [x] Análisis comparativo Espriella vs. Cepeda
+- [ ] Corpus limpio y lematizado (requiere archivos en data/raw/)
+- [ ] Clasificación automática de enunciados
+- [ ] Artículo de opinión — versión final
