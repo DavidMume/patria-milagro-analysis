@@ -53,6 +53,19 @@ Ver [`docs/metodologia.md`](docs/metodologia.md) para el protocolo completo de l
 - Bienestar animal
 - Valle del Cauca / propuestas territoriales
 
+## Visualizaciones
+
+| Gráfica | Descripción |
+|---|---|
+| ![Tipos de enunciado](visualizations/01_tipos_enunciado.png) | Distribución del corpus por tipo: narrativa, propuesta, diagnóstico, etc. |
+| ![Propuestas por área](visualizations/02_propuestas_por_area.png) | Densidad programática por área temática |
+| ![Verificabilidad](visualizations/03_verificabilidad_cifras.png) | Qué porcentaje de las cifras citadas son verificables |
+| ![Cobertura](visualizations/04_cobertura_resumen_vs_pilares.png) | Comparación de cobertura: resumen ejecutivo vs. pilares completos |
+| ![Cifras por área](visualizations/05_cifras_por_area.png) | Distribución de cifras extraídas por área temática |
+| ![WordCloud](visualizations/06_wordcloud_corpus.png) | Términos más frecuentes del corpus completo |
+
+> Las visualizaciones se generan ejecutando `notebooks/03_visualizaciones.ipynb`
+
 ## Estado del proyecto
 
 - [x] Inventario de fuentes
