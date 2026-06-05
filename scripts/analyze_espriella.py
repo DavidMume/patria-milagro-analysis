@@ -514,20 +514,46 @@ if G.number_of_nodes() > 0:
     print("  Guardado: semantic_network.png")
 
 # ── t-SNE ──────────────────────────────────────────────────────────────────
-vocab_words = list(w2v.wv.key_to_index.keys())[:150]
+# Usar solo las palabras más frecuentes (>=4 chars) para evitar tokens
+# raros que generan clusters aislados; etiquetar solo las top-30 por
+# frecuencia para que el gráfico respire.
+freq_sorted = [w for w, _ in Counter(all_tokens).most_common()
+               if len(w) >= 4 and w in w2v.wv.key_to_index]
+vocab_words  = freq_sorted[:60]   # puntos en el gráfico
+label_words  = set(freq_sorted[:30])  # solo estos llevan etiqueta
+
 if len(vocab_words) >= 10:
     vectors = np.array([w2v.wv[w] for w in vocab_words])
     try:
         from sklearn.manifold import TSNE
-        perp = min(30, len(vocab_words)-1)
-        tsne = TSNE(n_components=2, random_state=42, perplexity=perp)
+        perp = min(20, len(vocab_words) - 1)
+        tsne = TSNE(n_components=2, random_state=42, perplexity=perp,
+                    n_iter=1000)
         coords = tsne.fit_transform(vectors)
-        fig, ax = plt.subplots(figsize=(12, 9))
-        ax.scatter(coords[:,0], coords[:,1], s=10, alpha=0.6, color="#1B3A6B")
-        for i, word in enumerate(vocab_words[:80]):
-            ax.annotate(word, (coords[i,0], coords[i,1]), fontsize=6, alpha=0.8)
-        ax.set_title("Embeddings de palabras (t-SNE) — Patria Milagro",
+
+        fig, ax = plt.subplots(figsize=(13, 9))
+        # Puntos: más grandes para las palabras etiquetadas
+        sizes  = [80 if w in label_words else 20 for w in vocab_words]
+        alphas = [0.9 if w in label_words else 0.35 for w in vocab_words]
+        for (x, y), s, a in zip(coords, sizes, alphas):
+            ax.scatter(x, y, s=s, alpha=a, color="#1B3A6B", linewidths=0)
+
+        # Etiquetas solo en las top-30, con fondo blanco para legibilidad
+        for i, word in enumerate(vocab_words):
+            if word in label_words:
+                ax.annotate(
+                    word, (coords[i, 0], coords[i, 1]),
+                    fontsize=8, fontweight="bold", color="#1B3A6B",
+                    xytext=(4, 4), textcoords="offset points",
+                    bbox=dict(boxstyle="round,pad=0.15", fc="white",
+                              ec="none", alpha=0.7),
+                )
+
+        ax.set_title("Embeddings de palabras (t-SNE)\nPatria Milagro — top 60 términos, etiquetas top 30",
                      fontsize=12, fontweight="bold")
+        ax.set_xticks([]); ax.set_yticks([])
+        for spine in ax.spines.values():
+            spine.set_visible(False)
         firma(fig)
         plt.tight_layout()
         fig.savefig(gfx("semantica","tsne_embeddings.png"), bbox_inches="tight", facecolor="white")
