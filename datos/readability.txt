@@ -1,0 +1,9 @@
+LEGIBILIDAD — Fernández Huerta (1959)
+206.84 - 1.02*(pal/orac) - 60*(síl/pal)
+Escala: 0-30 muy difícil | 30-50 difícil | 50-60 algo difícil | 60-70 normal
+
+Índice:                45.0/100
+Palabras por oración:  10.3
+Sílabas por palabra:   2.52
+Long. media oración:   12.5 palabras
+Long. media palabra:   5.9 caracteres

@@ -1,0 +1,96 @@
+
+Top similares a 'seguridad' (match: 'seguridad'):
+  billón: 0.981
+  familia: 0.978
+  empleo: 0.976
+  total: 0.976
+  alianza: 0.975
+  plan: 0.975
+  directo: 0.975
+  político: 0.973
+  anual: 0.973
+  digital: 0.973
+
+Top similares a 'corrupción' (match: 'corrupción'):
+  billón: 0.961
+  total: 0.957
+  infraestructura: 0.956
+  seguridad: 0.955
+  tributario: 0.955
+  burocracia: 0.954
+  empleo: 0.953
+  valor: 0.953
+  absoluto: 0.953
+  anual: 0.952
+
+Top similares a 'estado' (match: 'estatal'):
+  seguridad: 0.949
+  total: 0.948
+  billón: 0.946
+  empleo: 0.946
+  político: 0.946
+  eliminación: 0.946
+  reforma: 0.945
+  alianza: 0.945
+  zona: 0.945
+  resultado: 0.945
+
+Top similares a 'nación' (match: 'nación'):
+  seguridad: 0.944
+  empleo: 0.940
+  implacable: 0.939
+  alianza: 0.939
+  cultura: 0.939
+  billón: 0.936
+  plan: 0.935
+  infraestructura: 0.934
+  resultado: 0.934
+  reducción: 0.934
+
+Top similares a 'economía' (match: 'economía'):
+  zona: 0.957
+  seguridad: 0.954
+  familia: 0.952
+  billón: 0.952
+  empleo: 0.952
+  alianza: 0.952
+  total: 0.949
+  eliminación: 0.948
+  internacional: 0.947
+  resultado: 0.947
+
+Top similares a 'campo' (match: 'campesino'):
+  hambre: 0.938
+  total: 0.937
+  técnico: 0.936
+  anual: 0.935
+  directo: 0.935
+  impacto: 0.933
+  empleo: 0.933
+  ciudadano: 0.933
+  deporte: 0.930
+  crédito: 0.930
+
+Top similares a 'salud' (match: 'salud'):
+  plan: 0.950
+  propietario: 0.949
+  seguridad: 0.944
+  apoyo: 0.943
+  directo: 0.943
+  técnico: 0.942
+  billón: 0.941
+  riqueza: 0.941
+  subsidio: 0.941
+  ciudadano: 0.940
+
+Top similares a 'educación' (match: 'educación'):
+  billón: 0.967
+  tributario: 0.967
+  valor: 0.966
+  alianza: 0.963
+  seguridad: 0.963
+  total: 0.962
+  zona: 0.962
+  empleo: 0.961
+  hambre: 0.961
+  directo: 0.960
