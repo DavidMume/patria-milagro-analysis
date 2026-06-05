@@ -131,7 +131,7 @@ custom_sw = {
     "estar","haber","hay","han","son","sus","del","las","los","les","nos",
     "como","pero","para","por","con","sin","todo","todos","toda","todas",
     "mismo","misma","mismos","mismas","muy","cuando","quien","quienes",
-    "que","qué","donde","cómo","porque","si","ya","aún","sólo","colombia",
+    "que","qué","donde","cómo","porque","si","ya","aún","sólo",
     "colombiano","colombiana","colombianos","colombianas","gobierno",
     "nacional","país","público","pública","años","año","mil","millones",
     "deben","hacer","abelardo","espriella","candidato","patria","milagro",
