@@ -1,6 +1,7 @@
-# PDFs y documentos originales (no se suben al repo)
+# PDFs — excluir por defecto excepto los de sources/documentos/
 *.pdf
 *.PDF
+!sources/documentos/*.pdf
 
 # Jupyter checkpoints
 .ipynb_checkpoints/
