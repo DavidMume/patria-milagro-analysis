@@ -465,24 +465,46 @@ with open(datos("word2vec_similarities.txt"), "w", encoding="utf-8") as f:
             f.write(f"\n'{term}' no está en el vocabulario\n")
 
 # ── Red semántica ──────────────────────────────────────────────────────────
+# Con corpus pequeño las similitudes se comprimen en un rango estrecho; en
+# lugar de un umbral fijo se toman las top-N aristas por peso para mantener
+# la red legible independientemente del tamaño del corpus.
 print("Construyendo red semántica…")
-all_kw = list(w2v.wv.key_to_index.keys())[:200]
-G = nx.Graph()
-THRESHOLD = 0.60
+TOP_WORDS = 60   # vocabulario considerado
+TOP_EDGES = 50   # aristas a mostrar
+
+# Solo palabras >= 4 chars para evitar abreviaturas cortadas
+all_kw = [w for w in w2v.wv.key_to_index.keys() if len(w) >= 4][:TOP_WORDS]
+all_edges = []
 for i, w1 in enumerate(all_kw):
     for w2 in all_kw[i+1:]:
         try:
-            if w2v.wv.similarity(w1, w2) > THRESHOLD:
-                G.add_edge(w1, w2, weight=w2v.wv.similarity(w1, w2))
+            sim = float(w2v.wv.similarity(w1, w2))
+            all_edges.append((sim, w1, w2))
         except Exception:
             pass
 
+all_edges.sort(reverse=True)
+G = nx.Graph()
+for sim, w1, w2 in all_edges[:TOP_EDGES]:
+    G.add_edge(w1, w2, weight=sim)
+
 if G.number_of_nodes() > 0:
-    fig, ax = plt.subplots(figsize=(14, 10))
-    pos = nx.spring_layout(G, seed=42, k=0.6)
-    nx.draw_networkx(G, pos, ax=ax, node_size=25, font_size=6,
-                     width=0.4, alpha=0.7, with_labels=True)
-    ax.set_title(f"Red de similitud semántica (umbral={THRESHOLD})\nPatria Milagro",
+    freq_map = Counter(all_tokens)
+    node_sizes = [max(200, freq_map.get(n, 1) * 120) for n in G.nodes()]
+    fig, ax = plt.subplots(figsize=(13, 9))
+    pos = nx.spring_layout(G, seed=42, k=1.8)
+    nx.draw_networkx_nodes(G, pos, ax=ax, node_size=node_sizes,
+                           node_color="#1B3A6B", alpha=0.85)
+    # Labels desplazados arriba del nodo para no solaparse
+    label_pos = {k: (v[0], v[1] + 0.04) for k, v in pos.items()}
+    nx.draw_networkx_labels(G, label_pos, ax=ax, font_size=8,
+                            font_color="#1B3A6B", font_weight="bold")
+    weights = [G[u][v]["weight"] for u, v in G.edges()]
+    w_min, w_max = min(weights), max(weights)
+    widths = [0.8 + 2.5 * (w - w_min) / max(w_max - w_min, 1e-6) for w in weights]
+    nx.draw_networkx_edges(G, pos, ax=ax, width=widths,
+                           edge_color="#C8102E", alpha=0.35)
+    ax.set_title(f"Red de similitud semántica — top {TOP_EDGES} conexiones\nPatria Milagro",
                  fontsize=12, fontweight="bold")
     ax.axis("off")
     firma(fig)
